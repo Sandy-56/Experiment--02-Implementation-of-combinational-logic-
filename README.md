@@ -1,3 +1,5 @@
+Devoloped by: Santhosh D M
+Register Number:212223050044
 # Experiment--02-Implementation-of-combinational-logic
 Implementation of combinational logic gates
  
@@ -14,43 +16,54 @@ F2=xy’z+x’y’z+w’xy+wx’y+wxy
 ## Hardware – PCs, Cyclone II , USB flasher
 ## Software – Quartus prime
 
+## Theory:
+A combinational circuit is a circuit in which the output depends on the present combination of inputs. Combinational circuits are made up of logic gates. The output of each logic gate is determined by its logic function. Combinational circuits can be made using various logic gates, such as AND gates, OR gates, and NOT gates.
+## Procedure:
+Create a New Project: Open Quartus and create a new project by selecting "File" > "New Project Wizard."Follow the wizard's instructions to set up your project, including specifying the project name, location, and target device (FPGA).
 
- 
+Create a New Design File: *Once the project is created, right-click on the project name in the Project Navigator and select "Add New File." * * Choose "Verilog HDL File" or "VHDL File," depending on your chosen hardware description language.
 
-## Logic Diagram
-## Procedure
+Write the Combinational Logic Code:
+
+Open the newly created Verilog or VHDL file and write the code for your combinational logic.
+4.Compile the Project:
+
+To compile the project, click on "Processing" > "Start Compilation" in the menu. *Quartus will analyze your code, synthesize it into a netlist, and perform optimizations based on your target FPGA device.
+5.Analyze and Fix Errors:
+
+If there are any errors or warnings during the compilation process, Quartus will display them in the Messages window.
+6.Verification:
+
+Click on "File" > "New" > "Verification/Debugging Files" > "University Program VWF".
+
+Once Waveform is created Right Click on the Input/Output Panel > " Insert Node or Bus" > Click on Node Finder > Click On "List" > Select All.
+
+Give the Input Combinations according to the Truth Table and then simulate the Output Waveform.
 ## Program:
-Connect the supply (+5V) to the circuit Switch ON the main switch Press the switches for inputs “A” and “B”. The switch is ON state when 1 is pressed. The switch is OFF state when 0 is pressed. If the output is 1, then the bulb glows. Check all the gates following the same procedure.
-/*
-Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
-Developed by: Santhosh D M
-RegisterNumber: 23013934
 ```
-
-module DE_02(A,B,C,D,F1);
-input A,B,C,D;
+module experiment2(A,B,C,D,F1); input A,B,C,D;
 output F1;
 wire x1,x2,x3,x4,x5;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
+assign x1=(~A)&(~B)&(~C)&(~C);
+assign x2=(A)&(~D)&(~D);
+assign x3=(~B)&(C)&( ~D);
 assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign F1= x1 | x2 | x3 | x4  |x5;
+assign x5=(B)&(~C)&(~D);
+assign F1=x1|x2|x3|x4|x5;
 endmodule
 
 ```
 */
 ## RTL realization
+![285648994-21e1ae21-bf4e-4cf6-990c-04303e40d522](https://github.com/Sandy-56/Experiment--02-Implementation-of-combinational-logic-/assets/152118022/3e6d4f0d-39b6-44a1-85a7-e82c3ae7e5a0)
 
-## Output![263437285-de2e9e3f-6a9c-4e4c-8b7f-6a5889265057](https://github.com/Sandy-56/Experiment--02-Implementation-of-combinational-logic-/assets/152118022/b569f174-8eea-4a0a-a2b0-10da9bbb2ab8)
-:![263437304-462ac9cc-7510-4fa9-ab8d-e2355c53830f](https://github.com/Sandy-56/Experiment--02-Implementation-of-combinational-logic-/assets/152118022/30da52c4-4fea-48c4-abf3-0bee03304914)
-
-
-## RTL
-![263437331-250474a6-747e-40cb-be3b-4d0c5473adb6](https://github.com/Sandy-56/Experiment--02-Implementation-of-combinational-logic-/assets/152118022/6213cd59-4e06-4918-9be4-714507c37211)
+## Truth table:
+![285649069-c6468b54-7ec8-4a38-b959-64b7df34c7e3](https://github.com/Sandy-56/Experiment--02-Implementation-of-combinational-logic-/assets/152118022/aaf5cd92-50fb-4203-a799-1c34567170c0)
 
 
-## Timing Diagram
+
+## Timing Diagram:
+![285649115-4640dcf3-91e4-42c8-bf85-e0d7d05d2b63](https://github.com/Sandy-56/Experiment--02-Implementation-of-combinational-logic-/assets/152118022/8df623fc-6b40-40f2-93da-307d6dc8a976)
+
 ## Result:
 Thus the given logic functions are implemented using  and their operations are verified using Verilog programming.
