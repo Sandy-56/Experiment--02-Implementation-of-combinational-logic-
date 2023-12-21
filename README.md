@@ -1,5 +1,5 @@
-Devoloped by: Santhosh D M
-Register Number:212223050044
+## Devoloped by: Santhosh D M
+## Register Number:212223050044
 # Experiment--02-Implementation-of-combinational-logic
 Implementation of combinational logic gates
  
